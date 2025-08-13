@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artyx - AI-Powered Background Replacement with Perfect Identity Preservation</title>
+    <meta name="description" content="Transform any photo background with state-of-the-art AI while preserving your identity perfectly. Download Artyx for iOS and experience the future of image editing.">
+    <meta name="keywords" content="AI photo editing, background replacement, iOS app, image generation, FLUX AI, photo enhancement">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Artyx - AI Background Replacement for iOS">
+    <meta property="og:description" content="Revolutionary AI-powered background replacement that preserves your identity perfectly. Try it free on iOS.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artyx.app">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#007AFF"/>
+                                <stop offset="100%" style="stop-color:#AF52DE"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="32" height="32" rx="8" fill="url(#logoGradient)"/>
+                        <path d="M8 12h16v8H8z" fill="white" fill-opacity="0.9"/>
+                        <circle cx="20" cy="14" r="2" fill="white"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Artyx</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+                <a href="contact.html" class="nav-link">Support</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="#download" class="btn btn-primary">Download App</a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        AI-Powered Background Replacement with 
+                        <span class="gradient-text">Perfect Identity Preservation</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transform any photo background instantly while keeping you looking exactly like you. 
+                        Powered by cutting-edge FLUX.1 Kontext Pro technology.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn btn-primary btn-large">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 1.5C5.31 1.5 1.5 5.31 1.5 10S5.31 18.5 10 18.5 18.5 14.69 18.5 10 14.69 1.5 10 1.5zm0 2.25c1.24 0 2.25 1.01 2.25 2.25S11.24 8.25 10 8.25 7.75 7.24 7.75 6 8.76 3.75 10 3.75zm0 11.25c-1.84 0-3.46-.93-4.41-2.34.02-1.47 2.94-2.28 4.41-2.28s4.39.81 4.41 2.28c-.95 1.41-2.57 2.34-4.41 2.34z" fill="currentColor"/>
+                            </svg>
+                            Download for iOS
+                        </a>
+                        <button class="btn btn-secondary btn-large" onclick="playDemo()">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M8 5.5l7 4.5-7 4.5V5.5z" fill="currentColor"/>
+                            </svg>
+                            Watch Demo
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">50,000+</span>
+                            <span class="stat-label">Downloads</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4.8★</span>
+                            <span class="stat-label">App Store Rating</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1M+</span>
+                            <span class="stat-label">Images Enhanced</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="demo-before-after">
+                                <div class="demo-image demo-before">
+                                    <div class="demo-placeholder">
+                                        <div class="demo-person"></div>
+                                        <div class="demo-bg original"></div>
+                                    </div>
+                                    <span class="demo-label">Before</span>
+                                </div>
+                                <div class="demo-arrow">→</div>
+                                <div class="demo-image demo-after">
+                                    <div class="demo-placeholder">
+                                        <div class="demo-person"></div>
+                                        <div class="demo-bg enhanced"></div>
+                                    </div>
+                                    <span class="demo-label">After</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Revolutionary AI Technology</h2>
+                <p class="section-subtitle">
+                    Experience the next generation of image editing with FLUX.1 Kontext Pro – 
+                    the most advanced identity-preserving AI available on mobile.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon gradient-bg-1">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L3.09 8.26L12 14l8.91-5.74L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M3.09 8.26L12 14v8l-8.91-5.74V8.26z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 14v8l8.91-5.74V8.26L12 14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Perfect Identity Preservation</h3>
+                    <p class="feature-description">
+                        Our FLUX.1 Kontext Pro technology maintains your exact facial features, 
+                        skin tone, and identity while seamlessly replacing any background.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon gradient-bg-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Three Quality Tiers</h3>
+                    <p class="feature-description">
+                        Choose from Pro (FLUX-Dev), Balanced (SDXL), or Instant (Core ML) processing 
+                        to match your quality needs and time constraints.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon gradient-bg-3">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smart Quality Analysis</h3>
+                    <p class="feature-description">
+                        Real-time image quality assessment provides personalized recommendations 
+                        to optimize your results before processing.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon gradient-bg-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Professional Editing Tools</h3>
+                    <p class="feature-description">
+                        Complete editing suite with crop, resize, rotate, and flip tools 
+                        integrated seamlessly into your workflow.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon gradient-bg-5">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 1l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-2.01L12 1z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Privacy-First Design</h3>
+                    <p class="feature-description">
+                        Your photos stay secure with optional on-device processing and 
+                        no permanent storage on our servers.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon gradient-bg-6">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" stroke-dasharray="2 6"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Instant Preview System</h3>
+                    <p class="feature-description">
+                        Visual category previews with gradient-based representations 
+                        help you choose the perfect style before processing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">
+                    Transform your photos in three simple steps with our advanced AI technology.
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Choose Your Photo</h3>
+                        <p class="step-description">
+                            Select a photo from your library or take a new one with the camera. 
+                            Our smart quality analyzer will provide optimization tips.
+                        </p>
+                        <div class="step-visual">
+                            <div class="step-card">
+                                <div class="step-icon">📷</div>
+                                <span>Select Image</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Pick Your Background</h3>
+                        <p class="step-description">
+                            Browse our curated collection of backgrounds across multiple categories: 
+                            Nature, Urban, Studio, Artistic, Business, and Seasonal.
+                        </p>
+                        <div class="step-visual">
+                            <div class="step-categories">
+                                <div class="category-preview nature">🌲</div>
+                                <div class="category-preview urban">🏢</div>
+                                <div class="category-preview studio">💡</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">AI Magic Happens</h3>
+                        <p class="step-description">
+                            Our FLUX.1 Kontext Pro AI analyzes your photo and generates a 
+                            photorealistic result that preserves your identity perfectly.
+                        </p>
+                        <div class="step-visual">
+                            <div class="processing-animation">
+                                <div class="ai-brain">🧠</div>
+                                <div class="processing-waves">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">
+                    Start free and upgrade when you need more. All plans include our signature identity preservation technology.
+                </p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Free Tier -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Free</h3>
+                        <p class="pricing-subtitle">Perfect for trying out the app</p>
+                        <div class="pricing-price">
+                            <span class="price">$0</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>3 credits per day</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>All background categories</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Basic editing tools</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Earn credits by watching ads</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Get Started</button>
+                </div>
+                
+                <!-- Pro Tier -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pro</h3>
+                        <p class="pricing-subtitle">For serious creators</p>
+                        <div class="pricing-price">
+                            <span class="price">$7.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>150 generations per month</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Ad-free experience</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Priority processing (30% faster)</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>High-resolution exports (2048x2048)</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Exclusive premium backgrounds</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Watermark-free downloads</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Start Free Trial</button>
+                </div>
+                
+                <!-- Enterprise Tier -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <p class="pricing-subtitle">For teams and professionals</p>
+                        <div class="pricing-price">
+                            <span class="price">$29.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>1000 generations per month</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Team collaboration features</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>API access for integration</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Priority support</span>
+                        </div>
+                        <div class="feature">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Custom model training</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-text">
+                    <h2 class="download-title">Ready to Transform Your Photos?</h2>
+                    <p class="download-subtitle">
+                        Join thousands of users already creating stunning images with Artyx. 
+                        Download now and get started for free.
+                    </p>
+                    <div class="download-buttons">
+                        <a href="https://apps.apple.com/app/artyx" class="app-store-btn" target="_blank" rel="noopener">
+                            <img src="images/app-store-badge.svg" alt="Download on the App Store" width="200" height="60">
+                        </a>
+                    </div>
+                    <div class="download-info">
+                        <p class="download-note">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Free to download • No signup required • iOS 17+ compatible
+                        </p>
+                    </div>
+                </div>
+                <div class="download-visual">
+                    <div class="phones-mockup">
+                        <div class="phone-device phone-1">
+                            <div class="phone-content">
+                                <div class="mockup-screen home-screen"></div>
+                            </div>
+                        </div>
+                        <div class="phone-device phone-2">
+                            <div class="phone-content">
+                                <div class="mockup-screen result-screen"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#007AFF"/>
+                                            <stop offset="100%" style="stop-color:#AF52DE"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="32" height="32" rx="8" fill="url(#footerLogoGradient)"/>
+                                    <path d="M8 12h16v8H8z" fill="white" fill-opacity="0.9"/>
+                                    <circle cx="20" cy="14" r="2" fill="white"/>
+                                </svg>
+                            </div>
+                            <span class="logo-text">Artyx</span>
+                        </div>
+                        <p class="footer-description">
+                            The future of AI-powered background replacement. 
+                            Transform your photos while preserving your identity perfectly.
+                        </p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4 class="footer-heading">Product</h4>
+                            <ul class="footer-list">
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#pricing">Pricing</a></li>
+                                <li><a href="#how-it-works">How It Works</a></li>
+                                <li><a href="#download">Download</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4 class="footer-heading">Support</h4>
+                            <ul class="footer-list">
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="contact.html#faq">FAQ</a></li>
+                                <li><a href="contact.html">Help Center</a></li>
+                                <li><a href="contact.html">Report Issue</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4 class="footer-heading">Legal</h4>
+                            <ul class="footer-list">
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms of Use</a></li>
+                                <li><a href="privacy.html#data">Data Protection</a></li>
+                                <li><a href="privacy.html#cookies">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="footer-copyright">
+                        © 2024 Artyx. All rights reserved.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M20 3.924c-.736.327-1.527.549-2.357.649.848-.508 1.499-1.312 1.804-2.27-.793.47-1.671.812-2.606.996C16.104 2.488 15.026 2 13.847 2c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935C6.435 6.85 3.417 5.207 1.393 2.734c-.354.608-.557 1.315-.557 2.069 0 1.423.724 2.679 1.825 3.415-.672-.021-1.305-.206-1.859-.513v.052c0 1.988 1.414 3.647 3.292 4.023-.344.094-.707.144-1.081.144-.264 0-.521-.026-.771-.074.521 1.626 2.033 2.809 3.826 2.841C4.67 15.31 2.9 15.895 1 15.895c-.331 0-.658-.019-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.531C18.67 5.51 19.386 4.766 20 3.924z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <rect x="2" y="2" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="15.5" cy="4.5" r="1" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

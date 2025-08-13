@@ -1,0 +1,275 @@
+/* Artyx Website - Base Styles */
+
+/* CSS Custom Properties (Design Tokens) */
+:root {
+    /* Colors - iOS System Colors */
+    --color-primary: #007AFF;
+    --color-secondary: #AF52DE;
+    --color-success: #34C759;
+    --color-warning: #FF9500;
+    --color-error: #FF3B30;
+    
+    /* Gradient Colors */
+    --gradient-primary: linear-gradient(135deg, #007AFF 0%, #AF52DE 100%);
+    --gradient-secondary: linear-gradient(135deg, #AF52DE 0%, #007AFF 100%);
+    --gradient-feature-1: linear-gradient(135deg, #007AFF20 0%, #AF52DE20 100%);
+    --gradient-feature-2: linear-gradient(135deg, #34C75920 0%, #007AFF20 100%);
+    --gradient-feature-3: linear-gradient(135deg, #FF950020 0%, #34C75920 100%);
+    --gradient-feature-4: linear-gradient(135deg, #AF52DE20 0%, #FF950020 100%);
+    --gradient-feature-5: linear-gradient(135deg, #FF3B3020 0%, #AF52DE20 100%);
+    --gradient-feature-6: linear-gradient(135deg, #007AFF20 0%, #34C75920 100%);
+    
+    /* Background Colors */
+    --color-background: #FFFFFF;
+    --color-background-secondary: #F2F2F7;
+    --color-background-tertiary: #FFFFFF;
+    --color-background-elevated: #FFFFFF;
+    --color-background-grouped: #F2F2F7;
+    
+    /* Text Colors */
+    --color-text-primary: #000000;
+    --color-text-secondary: #3C3C43;
+    --color-text-tertiary: #3C3C4399;
+    --color-text-quaternary: #3C3C434D;
+    
+    /* Border Colors */
+    --color-border: #3C3C434D;
+    --color-border-secondary: #3C3C4329;
+    
+    /* Shadow Colors */
+    --color-shadow: rgba(0, 0, 0, 0.08);
+    --color-shadow-elevated: rgba(0, 0, 0, 0.12);
+    
+    /* Typography Scale */
+    --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    --font-size-xs: 0.75rem;     /* 12px */
+    --font-size-sm: 0.875rem;    /* 14px */
+    --font-size-base: 1rem;      /* 16px */
+    --font-size-lg: 1.125rem;    /* 18px */
+    --font-size-xl: 1.25rem;     /* 20px */
+    --font-size-2xl: 1.5rem;     /* 24px */
+    --font-size-3xl: 1.875rem;   /* 30px */
+    --font-size-4xl: 2.25rem;    /* 36px */
+    --font-size-5xl: 3rem;       /* 48px */
+    --font-size-6xl: 3.75rem;    /* 60px */
+    
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Spacing Scale (4pt Grid) */
+    --spacing-xs: 0.25rem;   /* 4px */
+    --spacing-sm: 0.5rem;    /* 8px */
+    --spacing-md: 0.75rem;   /* 12px */
+    --spacing-lg: 1rem;      /* 16px */
+    --spacing-xl: 1.25rem;   /* 20px */
+    --spacing-2xl: 1.5rem;   /* 24px */
+    --spacing-3xl: 2rem;     /* 32px */
+    --spacing-4xl: 2.5rem;   /* 40px */
+    --spacing-5xl: 3rem;     /* 48px */
+    --spacing-6xl: 4rem;     /* 64px */
+    
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-full: 9999px;
+    
+    /* Container Sizes */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1536px;
+    
+    /* Z-Index Scale */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+    --z-toast: 1080;
+}
+
+/* Dark Mode Colors */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #000000;
+        --color-background-secondary: #1C1C1E;
+        --color-background-tertiary: #2C2C2E;
+        --color-background-elevated: #1C1C1E;
+        --color-background-grouped: #000000;
+        
+        --color-text-primary: #FFFFFF;
+        --color-text-secondary: #EBEBF5;
+        --color-text-tertiary: #EBEBF599;
+        --color-text-quaternary: #EBEBF54D;
+        
+        --color-border: #545458;
+        --color-border-secondary: #54545829;
+        
+        --color-shadow: rgba(0, 0, 0, 0.3);
+        --color-shadow-elevated: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-2xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-3xl);
+    }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: 1.3;
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-size: var(--font-size-4xl);
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+}
+
+h3 {
+    font-size: var(--font-size-2xl);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+}
+
+h6 {
+    font-size: var(--font-size-base);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: var(--font-size-5xl);
+    }
+    
+    h2 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    h3 {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: var(--font-size-6xl);
+    }
+}
+
+p {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-secondary);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section Styles */
+section {
+    padding: var(--spacing-5xl) 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-5xl);
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-xl);
+    }
+}
