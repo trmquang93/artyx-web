@@ -12,6 +12,44 @@
     }
 }
 
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 122, 255, 0.6), 0 0 40px rgba(0, 122, 255, 0.4);
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -79,21 +117,40 @@
     }
 }
 
-/* Animation Classes */
+/* Enhanced Animation Classes */
 .animate-in {
-    animation: fadeInUp 0.6s ease forwards;
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .fade-in {
-    animation: fadeIn 0.5s ease forwards;
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
 }
 
 .slide-in-right {
-    animation: slideInRight 0.6s ease forwards;
+    animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateX(30px);
 }
 
 .slide-in-left {
-    animation: slideInLeft 0.6s ease forwards;
+    animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    opacity: 0;
+    transform: scale(0.3);
+}
+
+.scale-in {
+    animation: scaleIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: scale(0.8);
 }
 
 /* Hover Animations */
@@ -143,52 +200,69 @@
     animation-delay: 0.4s;
 }
 
-/* Mobile Menu Animations */
+/* Enhanced Mobile Menu Animations */
 @media (max-width: 767px) {
     .nav-menu {
         position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
+        top: 80px;
+        left: var(--spacing-lg);
+        right: var(--spacing-lg);
         background: var(--color-background);
-        border-top: 1px solid var(--color-border);
+        border-radius: var(--radius-xl);
+        border: 1px solid var(--color-border);
         padding: var(--spacing-xl);
-        transform: translateY(-100%);
+        transform: translateY(-120%) scale(0.95);
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: var(--z-dropdown);
-        box-shadow: 0 4px 20px var(--color-shadow);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
     }
-    
+
     .nav-menu.active {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
         opacity: 1;
         visibility: visible;
         display: flex;
         flex-direction: column;
         gap: var(--spacing-lg);
     }
-    
+
     .mobile-menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(6px, 6px);
     }
-    
+
     .mobile-menu-toggle.active span:nth-child(2) {
         opacity: 0;
+        transform: scaleX(0);
     }
-    
+
     .mobile-menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .nav-menu .nav-link {
+        padding: var(--spacing-lg) var(--spacing-md);
+        border-radius: var(--radius-lg);
+        transition: all 0.2s ease;
+        font-size: var(--font-size-lg);
+    }
+
+    .nav-menu .nav-link:hover {
+        background: rgba(0, 122, 255, 0.08);
+        transform: translateX(4px);
     }
 }
 
-/* Scroll Animations */
+/* Enhanced Scroll Animations */
 .navbar.scrolled {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 2px 10px var(--color-shadow);
-    transition: all 0.3s ease;
+    backdrop-filter: blur(16px) saturate(120%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -211,7 +285,7 @@
     }
 }
 
-/* Phone Mockup Animations */
+/* Enhanced Phone Mockup with 3D Tilt Effects */
 .phone-mockup {
     position: relative;
     width: 280px;
@@ -219,12 +293,19 @@
     background: var(--color-text-primary);
     border-radius: 40px;
     padding: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(0, 122, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
 }
 
 .phone-mockup:hover {
-    transform: translateY(-8px);
+    transform: translateY(-12px) rotateX(5deg) rotateY(-5deg);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(0, 122, 255, 0.2),
+        0 0 60px rgba(175, 82, 222, 0.1);
 }
 
 .phones-mockup .phone-device {
@@ -429,6 +510,41 @@
 .hero-visual {
     animation: slideInRight 0.8s ease 0.4s both;
 }
+
+/* Floating Particles Animation */
+@keyframes floatParticle {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px) rotate(90deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-40px) translateX(-10px) rotate(180deg);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(-20px) translateX(5px) rotate(270deg);
+        opacity: 0.9;
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: floatParticle 8s ease-in-out infinite;
+}
+
+.particle:nth-child(2) { animation-delay: -2s; }
+.particle:nth-child(3) { animation-delay: -4s; }
+.particle:nth-child(4) { animation-delay: -6s; }
+.particle:nth-child(5) { animation-delay: -8s; }
 
 /* Loading Page Animation */
 body.loaded {

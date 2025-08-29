@@ -85,9 +85,12 @@ function initializeAnimations() {
         });
     }, observerOptions);
     
-    // Observe elements that should animate in
+    // Observe elements that should animate in with staggered timing
     const animateElements = document.querySelectorAll('.feature-card, .step, .pricing-card');
-    animateElements.forEach(el => observer.observe(el));
+    animateElements.forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.1}s`;
+        observer.observe(el);
+    });
 }
 
 /**
@@ -269,23 +272,37 @@ function toggleFAQ(button) {
 }
 
 /**
- * Initialize scroll-based animations
+ * Initialize scroll-based animations and progress indicator
  */
 function initializeScrollAnimations() {
-    // Add scroll listener for navbar background
+    // Add scroll listener for navbar background and progress
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-    
+
+    // Create progress indicator
+    const progressBar = document.createElement('div');
+    progressBar.className = 'scroll-progress';
+    progressBar.innerHTML = '<div class="scroll-progress-bar"></div>';
+    document.body.appendChild(progressBar);
+
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
         // Add background to navbar when scrolled
         if (scrollTop > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-        
+
+        // Update progress bar
+        const progressBarElement = document.querySelector('.scroll-progress-bar');
+        if (progressBarElement) {
+            progressBarElement.style.width = scrollPercent + '%';
+        }
+
         lastScrollTop = scrollTop;
     });
 }

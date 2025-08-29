@@ -9,15 +9,32 @@
     --color-warning: #FF9500;
     --color-error: #FF3B30;
     
-    /* Gradient Colors */
+    /* Enhanced Gradient Colors */
     --gradient-primary: linear-gradient(135deg, #007AFF 0%, #AF52DE 100%);
     --gradient-secondary: linear-gradient(135deg, #AF52DE 0%, #007AFF 100%);
-    --gradient-feature-1: linear-gradient(135deg, #007AFF20 0%, #AF52DE20 100%);
-    --gradient-feature-2: linear-gradient(135deg, #34C75920 0%, #007AFF20 100%);
-    --gradient-feature-3: linear-gradient(135deg, #FF950020 0%, #34C75920 100%);
-    --gradient-feature-4: linear-gradient(135deg, #AF52DE20 0%, #FF950020 100%);
-    --gradient-feature-5: linear-gradient(135deg, #FF3B3020 0%, #AF52DE20 100%);
-    --gradient-feature-6: linear-gradient(135deg, #007AFF20 0%, #34C75920 100%);
+    --gradient-tertiary: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    --gradient-warm: linear-gradient(135deg, #FF6B35 0%, #AF52DE 50%, #007AFF 100%);
+    --gradient-cool: linear-gradient(135deg, #007AFF 0%, #34C759 50%, #AF52DE 100%);
+    --gradient-sunset: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #AF52DE 100%);
+    --gradient-ocean: linear-gradient(135deg, #007AFF 0%, #34C759 50%, #AF52DE 100%);
+
+    /* Glassmorphism Gradients */
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    --gradient-glass-dark: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 100%);
+
+    /* Feature Gradients with Enhanced Opacity */
+    --gradient-feature-1: linear-gradient(135deg, rgba(0,122,255,0.15) 0%, rgba(175,82,222,0.15) 100%);
+    --gradient-feature-2: linear-gradient(135deg, rgba(52,199,89,0.15) 0%, rgba(0,122,255,0.15) 100%);
+    --gradient-feature-3: linear-gradient(135deg, rgba(255,149,0,0.15) 0%, rgba(52,199,89,0.15) 100%);
+    --gradient-feature-4: linear-gradient(135deg, rgba(175,82,222,0.15) 0%, rgba(255,149,0,0.15) 100%);
+    --gradient-feature-5: linear-gradient(135deg, rgba(255,59,48,0.15) 0%, rgba(175,82,222,0.15) 100%);
+    --gradient-feature-6: linear-gradient(135deg, rgba(0,122,255,0.15) 0%, rgba(52,199,89,0.15) 100%);
+
+    /* Accent Colors */
+    --color-accent-warm: #FF6B35;
+    --color-accent-gold: #F7931E;
+    --color-accent-coral: #FF6B6B;
+    --color-accent-teal: #5AC8FA;
     
     /* Background Colors */
     --color-background: #FFFFFF;
@@ -36,9 +53,17 @@
     --color-border: #3C3C434D;
     --color-border-secondary: #3C3C4329;
     
-    /* Shadow Colors */
+    /* Enhanced Shadow System */
     --color-shadow: rgba(0, 0, 0, 0.08);
     --color-shadow-elevated: rgba(0, 0, 0, 0.12);
+    --color-shadow-strong: rgba(0, 0, 0, 0.16);
+    --color-shadow-glow: rgba(0, 122, 255, 0.2);
+    --color-shadow-warm: rgba(255, 107, 53, 0.15);
+
+    /* Glassmorphism Properties */
+    --glass-backdrop: blur(20px);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-border-dark: rgba(255, 255, 255, 0.1);
     
     /* Typography Scale */
     --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
@@ -53,11 +78,15 @@
     --font-size-5xl: 3rem;       /* 48px */
     --font-size-6xl: 3.75rem;    /* 60px */
     
-    /* Font Weights */
+    /* Enhanced Font Weights */
+    --font-weight-thin: 100;
+    --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
     
     /* Spacing Scale (4pt Grid) */
     --spacing-xs: 0.25rem;   /* 4px */
@@ -230,12 +259,46 @@ a:hover {
     opacity: 0.8;
 }
 
-/* Gradient Text */
+/* Enhanced Gradient Text Effects */
 .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.gradient-text-warm {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-sunset {
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-ocean {
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Enhanced Typography with Text Effects */
+.text-glow {
+    text-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
+}
+
+.text-shadow-soft {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-strong {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Section Styles */
