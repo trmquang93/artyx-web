@@ -20,41 +20,27 @@
     height: 160px;
     border-radius: var(--radius-lg);
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.demo-placeholder {
+.demo-image:hover {
+    transform: scale(1.05);
+}
+
+.demo-photo {
     width: 100%;
     height: 100%;
-    position: relative;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
 }
 
-.demo-person {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 60px;
-    background: var(--color-primary);
-    border-radius: 20px 20px 8px 8px;
-    z-index: 2;
+.demo-before .demo-photo {
+    filter: brightness(0.9) saturate(0.8);
 }
 
-.demo-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-.demo-bg.original {
-    background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
-}
-
-.demo-bg.enhanced {
-    background: linear-gradient(45deg, #34C759, #007AFF);
+.demo-after .demo-photo {
+    filter: brightness(1.1) saturate(1.2);
 }
 
 .demo-label {
@@ -67,6 +53,22 @@
     .demo-before-after {
         flex-direction: row;
         gap: var(--spacing-xl);
+    }
+    
+    .demo-image {
+        width: 140px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .demo-image {
+        width: 100px;
+        height: 140px;
+    }
+    
+    .demo-label {
+        font-size: 0.75rem;
     }
 }
 
